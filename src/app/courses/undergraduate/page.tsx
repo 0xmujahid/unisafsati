@@ -1,5 +1,5 @@
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaAngleRight } from 'react-icons/fa';
 
 export default function FoundationYearPage() {

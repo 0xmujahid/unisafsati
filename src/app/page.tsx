@@ -9,10 +9,48 @@ import StudentFinance from '@/components/StudentFinance';
 import SuccessGuide from '@/components/SuccessGuide';
 import EducationalServices from '@/components/EducationalServices';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'Profile & Salome - UK & International Student Consultancy',
+  description: 'Expert UK educational consultancy helping students apply to British universities. We offer comprehensive support including visa guidance, student finance, and guaranteed job placement after graduation.'
+};
 
 export default function Home() {
   return (
     <>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            name: 'Profile & Salome',
+            description: 'UK & International Student Consultancy',
+            url: 'https://www.profileandsalome.com',
+            logo: 'https://www.profileandsalome.com/images/logo.png',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'UK'
+            },
+            telephone: '+442039835819',
+            email: 'info@profileandsalome.com',
+            sameAs: [
+              'https://www.facebook.com/profileandsalome',
+              'https://www.instagram.com/profileandsalome',
+              'https://www.linkedin.com/company/profileandsalome'
+            ],
+            offers: {
+              '@type': 'Offer',
+              name: 'University Application Support',
+              description: 'Comprehensive support for UK university applications including UCAS guidance.',
+              category: 'Educational Service'
+            }
+          })
+        }}
+      />
       <PromotionalBanner />
       {/* <VideoHero /> */}
       <Hero />

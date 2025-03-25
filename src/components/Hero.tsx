@@ -68,6 +68,7 @@ const Hero = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
+      aria-label="Main banner section"
     >
         <div className="absolute inset-0 bg-black/50"></div>
 
@@ -78,16 +79,15 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ffd700] mb-6 ">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ffd700] mb-6" itemProp="headline">
           {displayText}
           <span className="animate-pulse border-r-2 border-[#ffd700] ml-1"></span>
-
           </h1>
-          <p className="text-xl sm:text-2xl text-[#ffd700] mb-8 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-[#ffd700] mb-8 max-w-3xl mx-auto" itemProp="description">
             From your university application enrolment to assisting you with your student finance application, PROFILE & SALOME will be by your side, guiding you through every step of the way.
           </p>
           <p className="text-lg sm:text-xl text-[#ffd700] mb-8 max-w-3xl mx-auto">
-            Guaranteed job placement after graduation (limited availability).
+            <strong>Guaranteed job placement after graduation</strong> <span className="text-white">(limited availability)</span>.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,6 +97,7 @@ const Hero = () => {
             <Link
               href="#apply-here"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition duration-300"
+              aria-label="Apply to study at a British University"
             >
               Apply Now
             </Link>

@@ -3,44 +3,104 @@
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+
+  const texts = [
+    "Apply now to study at a British University",
+  ];
+  
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
+  useEffect(() => {
+    const currentText = texts[currentTextIndex];
+    
+    const handleTyping = () => {
+      if (isDeleting) {
+        // Backspace effect
+        setDisplayText(currentText.substring(0, currentIndex - 1));
+        setCurrentIndex(prev => prev - 1);
+        setTypingSpeed(50); // Faster when deleting
+      } else {
+        // Typing effect
+        setDisplayText(currentText.substring(0, currentIndex + 1));
+        setCurrentIndex(prev => prev + 1);
+        setTypingSpeed(100); // Normal speed when typing
+      }
+
+      // Change direction when reaching ends
+      if (!isDeleting && currentIndex === currentText.length) {
+        setTimeout(() => setIsDeleting(true), 1000); // Pause at end
+      } else if (isDeleting && currentIndex === 0) {
+        setIsDeleting(false);
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length); // Loop through texts
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentIndex, currentTextIndex, isDeleting, texts, typingSpeed]);
+  function scrollToHero() {
+    const hero = document.getElementById('apply-here');
+    if (hero) {
+      // Most reliable scroll method:
+      window.scrollTo({
+        top: hero.offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.error("Hero section not found!");
+    }
+  }
+ 
   return (
-    <section className="pt-32 pb-12 sm:pt-36 sm:pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-      <div className="max-w-3xl m-0 mx-auto text-center">
-        <motion.div 
+    <section 
+      id="hero" 
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      style={{ 
+        backgroundImage: 'url("/images/banner.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+        <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-4 sm:space-y-6 md:space-y-8"
+          transition={{ duration: 0.8 }}
+          className="text-center"
         >
-          <h1 className="text-5xl m-0 sm:text-4xl md:text-5xl font-bold text-[#252A64] leading-tight">
-            Apply now to study at a British University in January 2025
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ffd700] mb-6 ">
+          {displayText}
+          <span className="animate-pulse border-r-2 border-[#ffd700] ml-1"></span>
+
           </h1>
-          <p className="text-base font-semibold m-0 mt-0 sm:text-lg md:text-xl text-[#34363F] max-w-2xl mx-auto">
-            From your university application enrolment to assisting you with your student finance application, 
-           PROFILE & SALOME will be by your side, guiding you through every step of the way.
+          <p className="text-xl sm:text-2xl text-[#ffd700] mb-8 max-w-3xl mx-auto">
+            From your university application enrolment to assisting you with your student finance application, PROFILE & SALOME will be by your side, guiding you through every step of the way.
           </p>
-          <p className="text-base  m-0 mt-0 sm:text-lg md:text-xl font-semibold text-[#34363F] max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-[#ffd700] mb-8 max-w-3xl mx-auto">
             Guaranteed job placement after graduation (limited availability).
           </p>
-          <div className="flex flex-col mt-0 sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
-            <Link 
-              href="/apply" 
-              className="bg-[#252A64] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md  transition-colors text-center font-medium text-sm sm:text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <Link
+              href="#apply-here"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition duration-300"
             >
               Apply Now
             </Link>
-            <a 
-              href="https://wa.me/442039835819" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md  transition-colors font-medium text-sm sm:text-base shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <FaWhatsapp size={18} className="sm:text-xl" />
-              <span className="whitespace-nowrap">Message us on WhatsApp</span>
-            </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

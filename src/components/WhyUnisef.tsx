@@ -40,7 +40,7 @@ const WhyUnisef = () => {
   return (
     <section 
       ref={sectionRef}
-      className="bg-[#252A64] w-full overflow-hidden"
+      className="bg-[#FFD700] w-full overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col md:flex-row">
@@ -49,11 +49,11 @@ const WhyUnisef = () => {
             ref={contentRef}
             className="w-full md:w-1/2 py-12 sm:py-16 md:py-24 opacity-0  transition-all duration-1000 ease-out"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6 leading-tight">
               Why<br />US?
             </h2>
             <div className="max-w-lg">
-              <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-10 leading-relaxed">
+              <p className="text-black text-base sm:text-lg md:text-xl mb-6 sm:mb-10 leading-relaxed">
                 Your trusted educational consultancy. Personalised guidance, extensive network, proven results. 
                 We empower students with tailored solutions, continuous support, and insights to unlock 
                 academic excellence and a brighter future.
@@ -61,14 +61,14 @@ const WhyUnisef = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link 
                   href="/#apply-here" 
-                  className=" text-white border-2 border-solid  font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded hover:text-black hover:bg-[#B2835D] transition duration-300 text-center inline-block text-sm sm:text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                  className=" text-black border-2 border-solid  font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded hover:text-black hover:bg-[#B2835D] transition duration-300 text-center inline-block text-sm sm:text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                 >
                   Apply Now
                 </Link>
                 <Link 
                   href="https://wa.link/zsv41s" 
                   target="_blank"
-                  className="bg-[#25D366] text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded hover:bg-opacity-90 transition duration-300 flex items-center justify-center text-sm sm:text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="bg-[#25D366] text-black font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded hover:bg-opacity-90 transition duration-300 flex items-center justify-center text-sm sm:text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                 >
                   <span>Message us on WhatsApp</span>
                   <svg 

@@ -141,52 +141,24 @@ const Footer = () => {
  Illford IG1 1BA</p>
                 </div>
               </li>
-              <li className="flex items-center">
-                  <FaPhone className="text-blue-400 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
-                <div>
-                    <p className="text-sm sm:text-base text-gray-300 font-medium">Phone:</p>
-                    <a href="tel:02039835819" className="text-xs sm:text-sm text-gray-400 hover:text-blue-400 transition-colors">+447350011170<br></br>
-                    +447522637367</a>
-                  
-                </div>
-              </li>
-              <li className="flex items-center">
-                  <FaEnvelope className="text-blue-400 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
+              <li className="flex items-start">
+                  <FaEnvelope  className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
                 <div>
                     <p className="text-sm sm:text-base text-gray-300 font-medium">Email:</p>
-                    <p className="text-xs sm:text-sm text-gray-400">s.baig84@yahoo.com</p>
+                    <p className="text-xs sm:text-sm text-gray-400">info@profilesalome.co.uk</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                  <FaPhone  className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
+                <div>
+                    <p className="text-sm sm:text-base text-gray-300 font-medium">Phone:</p>
+                    <p className="text-xs sm:text-sm text-gray-400">+447356141418</p>
+                    <p className="text-xs sm:text-sm text-gray-400">+447350011170</p>
                 </div>
               </li>
             </ul>
-              <div className="mt-4 sm:mt-6">
-                <p className="text-sm sm:text-base text-gray-300 font-medium">Company Details:</p>
-                <p className="text-xs sm:text-sm text-gray-400 mb-1">Company number: 14829640</p>
-                <p className="text-xs sm:text-sm text-gray-400">VAT registration number (VRN): 465952845</p>
-              </div>
-              <div className="flex items-center space-x-4 mt-4">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20">
-                    <img 
-                      width="80" 
-                      height="80" 
-                      src="https://unisef.co.uk/wp-content/uploads/2023/05/ico-certified-150x150.png" 
-                      className="object-contain" 
-                      alt="Certification Badge" 
-                    />
-                  </div>
-                </div>
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20">
-                    <img 
-                      width="80" 
-                      height="80" 
-                      src="https://unisef.co.uk/wp-content/uploads/2023/05/British-council-logo-300x300-px-150x150.jpg" 
-                      className="object-contain" 
-                      alt="British Council Logo" 
-                    />
-                  </div>
-                </div>
-            </div>
+             
+              
           </div>
         </div>
         

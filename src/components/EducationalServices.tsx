@@ -88,9 +88,9 @@ const EducationalServices = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16"> */}
           {/* Image Column */}
-          <div className="hidden lg:flex items-center justify-center order-2 lg:order-1">
+          {/* <div className="hidden lg:flex items-center justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-md">
               <Image 
                 src="/images/educational-partner.png" 
@@ -100,10 +100,10 @@ const EducationalServices = () => {
                 className="rounded-lg"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Content Column */}
-          <div className="flex flex-col justify-center order-1 lg:order-2">
+          {/* <div className="flex flex-col justify-center order-1 lg:order-2">
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Your Reliable Educational Partner</h2>
             <p className="text-white/80 text-sm sm:text-base mb-4 sm:mb-6">
               Trustworthy and dependable, we are your reliable educational partner. With a commitment to your success, we provide guidance, support, and resources to help you achieve your educational goals.
@@ -118,7 +118,7 @@ const EducationalServices = () => {
               Securing placement after course completion is guaranteed, ensuring a seamless transition into the next phase of your academic journey.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Services */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">

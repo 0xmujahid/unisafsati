@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
     // Disable ESLint during build
     ignoreDuringBuilds: true,
   },
-  output: 'export',
+  
 };
 
 export default nextConfig;

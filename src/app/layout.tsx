@@ -1,33 +1,26 @@
 // src/app/layout.tsx
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import ClientLayout from "@/components/ClientLayout"; // Import the new ClientLayout
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import ClientLayout from '@/components/ClientLayout';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "UNISEF - Expert Educational Consultant Services for UK Students",
-  description:
-    "UNISEF is your trusted educational consultancy. We provide personalized guidance, extensive network, and proven results to help students achieve academic excellence.",
+  title: 'Profile & Salome - UK & International Student Consultancy',
+  description: 'Expert guidance for UK and international students. From university applications to student finance, we support your educational journey.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

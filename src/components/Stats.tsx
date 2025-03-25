@@ -33,7 +33,7 @@ const Stats = () => {
   
   return (
     <section className="py-16 px-6 md:px-12 text-white" style={{
-      backgroundImage: 'linear-gradient(125deg, #252A64 45%, #B2835D 100%)',
+      backgroundImage: 'linear-gradient(125deg,rgb(67, 37, 100) 45%, #FFD700 100%)',
       backgroundColor: 'transparent'
     }}>
       <div className="max-w-7xl mx-auto">
@@ -80,21 +80,22 @@ const Stats = () => {
           </motion.div>
           
           <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.5 }}
->
-  <div className="relative w-full h-[300px]  md:h-[600px] mx-auto overflow-hidden">
-    <Image
-      src="/images/student-image.png"
-      alt="Student Success"
-      fill
-      sizes="(max-width: 768px) 100vw, 50vw"
-      className="object-cover object-center"
-      priority
-    />
-  </div>
-</motion.div>
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full"
+          >
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] mx-auto overflow-hidden rounded-lg">
+              <Image
+                src="/images/student-image.png"
+                alt="Student Success"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

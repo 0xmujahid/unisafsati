@@ -40,7 +40,7 @@ const StudentFinance = () => {
   return (
     <section 
       ref={sectionRef}
-      className="overflow-hidden bg-[#252A64] pt-12 w-full"
+      className="overflow-hidden bg-[#FFD700] pt-12 w-full"
     >
       <div className="container mx-auto px-4  md:px-8 lg:px-12">
         {/* Grid container replacing flexbox */}
@@ -51,17 +51,17 @@ const StudentFinance = () => {
             className="w-full opacity-0 transform  px-4 lg:pt-28  sm:pt-2  md:px-8 lg:px-12 order-1 md:order-none"
           >
             <div className="max-w-md  md:mx-0 md:max-w-none lg:max-w-lg">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 text-black leading-tight">
                 Assistance with your student finance application<span className="text-[#25D366]">.</span>
               </h2>
-              <p className="text-white mb-4 sm:mb-6 md:mb-8 text-base sm:text-lg">
+              <p className="text-black mb-4 sm:mb-6 md:mb-8 text-base sm:text-lg">
                 Simplify your student finance application. Our expert team provides personalized guidance, identifies funding options, and ensures accurate and compelling applications.
               </p>
               <Link 
                 href="https://wa.me/447417737777"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#25D366] hover:bg-opacity-90 text-white font-semibold py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 rounded-md transition duration-300 text-sm sm:text-base"
+                className="inline-flex items-center bg-[#25D366] hover:bg-opacity-90 text-black font-semibold py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 rounded-md transition duration-300 text-sm sm:text-base"
               >
                 <svg 
                   className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 mr-2" 

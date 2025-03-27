@@ -10,11 +10,11 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 max-w-4xl">
-              Unleash Your Potential at Top-Ranked Universities in the UK
+            Unleash Your Potential at Top-Ranked Universities in the World 
             </h1>
             <div className="max-w-3xl mb-10">
               <p className="text-lg text-gray-200">
-                Shape a brighter future at top UK universities. World-class education, diverse disciplines, cutting-edge research, and global connections empower personal growth and success. Seize limitless opportunities for a better tomorrow.
+              Apply now to study inside and outside the UK. World-class education, diverse disciplines, cutting-edge research, and global connections empower personal growth and success. Seize limitless opportunities for a better tomorrow.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">

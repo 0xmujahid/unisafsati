@@ -58,7 +58,7 @@ const StudentFinance = () => {
                 Simplify your student finance application. Our expert team provides personalized guidance, identifies funding options, and ensures accurate and compelling applications.
               </p>
               <Link 
-                href="https://wa.me/447417737777"
+                href="https://wa.me/447350011170"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#25D366] hover:bg-opacity-90 text-black font-semibold py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 rounded-md transition duration-300 text-sm sm:text-base"

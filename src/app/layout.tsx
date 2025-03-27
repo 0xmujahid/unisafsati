@@ -4,6 +4,7 @@ import { GeistMono } from 'geist/font/mono';
 import type { Metadata } from 'next';
 import './globals.css';
 import ClientLayout from '@/components/ClientLayout';
+import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
   title: 'Profile & Salome - UK & International Student Consultancy',
@@ -54,6 +55,7 @@ export default function RootLayout({
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
+        <Sidebar />
       </body>
     </html>
   );

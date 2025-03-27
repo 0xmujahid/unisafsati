@@ -1,27 +1,65 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const ApplyHere = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = {
+        name: formData.get('name') as string,
+        email: formData.get('email') as string,
+        phone: formData.get('phone') as string,
+        course: formData.get('course') as string,
+        message: formData.get('message') as string,
+      };
+
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      // Clear form using the ref
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+      
+      setSubmitSuccess(true);
+      
+      // Scroll to hero section
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitError('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
-  function scrollToHero() {
-    const hero = document.getElementById('hero');
-    if (hero) {
-      // Most reliable scroll method:
-      window.scrollTo({
-        top: hero.offsetTop,
-        behavior: 'smooth'
-      });
-    } else {
-      console.error("Hero section not found!");
-    }
-  }
+
   return (
     <section id="apply-here" className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
@@ -36,7 +74,7 @@ const ApplyHere = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-xl p-6 sm:p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -110,11 +148,24 @@ const ApplyHere = () => {
                 ></textarea>
               </div>
 
+              {submitError && (
+                <div className="text-red-600 p-3 bg-red-50 rounded-md border border-red-200">
+                  {submitError}
+                </div>
+              )}
+
+              {submitSuccess && (
+                <div className="text-green-600 p-3 bg-green-50 rounded-md border border-green-200">
+                  Thank you for your application! We'll be in touch soon.
+                </div>
+              )}
+
               <button 
-                onClick={scrollToHero}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition duration-300"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>
             </form>
           </div>

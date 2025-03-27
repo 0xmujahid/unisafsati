@@ -62,7 +62,7 @@ const Stats = () => {
               ))}
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold">3 Years in Business</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold">Student Finance Available</h2>
             
             <div className="mt-6">
               <div className="text-xl mb-2">Successful Enrolment</div>
@@ -72,7 +72,7 @@ const Stats = () => {
             </div>
             
             <div className="mt-6">
-              <div className="text-xl mb-2">UK Universities</div>
+              <div className="text-xl mb-2">Global Universities</div>
               <div className="text-5xl md:text-7xl font-bold text-amber-400">
                 {universitiesCount}+
               </div>

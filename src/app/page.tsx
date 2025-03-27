@@ -9,6 +9,7 @@ import StudentFinance from '@/components/StudentFinance';
 import SuccessGuide from '@/components/SuccessGuide';
 import EducationalServices from '@/components/EducationalServices';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import Remote from '@/components/Remote';
 import { Metadata } from 'next';
 import Script from 'next/script';
 
@@ -62,6 +63,7 @@ export default function Home() {
         <JobPlacement />
         <StudentFinance />
         <SuccessGuide />
+        <Remote />
         <EducationalServices />
       </div>
     </>

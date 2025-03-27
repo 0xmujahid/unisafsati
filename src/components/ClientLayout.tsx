@@ -2,17 +2,22 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 // Dynamically import ClientComponentsWrapper with SSR disabled
 const ClientComponentsWrapper = dynamic(
-  () => import("@/components/ClientComponentsWrapper"),
-  { ssr: false } // Disable SSR for this component
+  () => import('./ClientComponentsWrapper'),
+  { ssr: false }
 );
 
-export default function ClientLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <ClientComponentsWrapper>{children}</ClientComponentsWrapper>;
-}
+const ClientLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <ClientComponentsWrapper>
+      {children}
+    </ClientComponentsWrapper>
+  );
+};
+
+export default ClientLayout;

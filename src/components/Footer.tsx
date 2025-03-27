@@ -120,7 +120,7 @@ const Footer = () => {
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-blue-600 transition-colors w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
                   <FaFacebook size={18} className="sm:text-xl" />
                 </a>
-                <a href="https://wa.me/442039835819" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 transition-colors w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                <a href="https://wa.me/447350011170" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 transition-colors w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
                   <FaWhatsapp size={18} className="sm:text-xl" />
                 </a>
                 <a href="tel:02039835819" className="bg-gray-800 hover:bg-blue-600 transition-colors w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
@@ -146,6 +146,8 @@ const Footer = () => {
                 <div>
                     <p className="text-sm sm:text-base text-gray-300 font-medium">Email:</p>
                     <p className="text-xs sm:text-sm text-gray-400">info@profilesalome.co.uk</p>
+                    <p className="text-xs sm:text-sm text-gray-400">Complaint@profilesalome.co.uk</p>
+                    <p className="text-xs sm:text-sm text-gray-400">admin@profilesalome.co.uk</p>
                 </div>
               </li>
               <li className="flex items-start">

@@ -78,7 +78,7 @@ const JobPlacement = () => {
                 There is no other agency in the UK that offers guaranteed job placement except us. Our spots are limited, so contact us before they are filled.
               </p>
               <Link 
-                href="https://wa.me/447417737777"
+                href="https://wa.me/447350011170"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#25D366] hover:bg-opacity-90 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-md transition duration-300 text-sm sm:text-base"

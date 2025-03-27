@@ -107,7 +107,7 @@ const Navbar = () => {
 
               {/* CTA Button */}
               <a 
-                href="https://calendly.com/isabella-unisef/15min" 
+                href="https://wa.me/447350011170"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#252A64] text-white font-bold py-2 px-4 lg:py-2.5 lg:px-6 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm lg:text-base whitespace-nowrap"
@@ -171,7 +171,7 @@ const Navbar = () => {
           </li>
           <li>
             <a 
-              href="https://calendly.com/isabella-unisef/15min" 
+            href="https://wa.me/447350011170"
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center bg-white text-[#0f1033] font-bold py-2.5 px-6 rounded-md hover:bg-opacity-90 transition-all duration-300"

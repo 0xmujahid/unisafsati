@@ -10,7 +10,7 @@ const Footer = () => {
     
       
       {/* Sticky Phone Button */}
-      <a 
+      {/* <a 
         href="tel:02039835819" 
         className="fixed bottom-24 right-4 z-50 flex items-center group"
         aria-label="Call us"
@@ -22,7 +22,7 @@ const Footer = () => {
           <FaPhone className="text-xl" />
         </div>
       </a>
-      
+       */}
       <footer className="bg-gray-900 text-white pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 relative overflow-hidden">
       {/* Background decorations */}
         <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-blue-900 rounded-full opacity-10 transform translate-x-1/3 -translate-y-1/3"></div>

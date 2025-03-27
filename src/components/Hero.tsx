@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 const Hero = () => {
 
   const texts = [
-    "Apply now to study at a British University",
+    "Apply now to study at  British Universities",
   ];
   
   const [displayText, setDisplayText] = useState('');

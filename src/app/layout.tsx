@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Profile & Salome - UK & International Student Consultancy',
     description: 'Expert UK student consultancy for university applications, student finance, visa guidance and guaranteed job placement.',
-    url: 'https://www.profileandsalome.com',
+    url: 'https://www.profilesalome.co.uk',
     siteName: 'Profile & Salome',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://www.profileandsalome.com',
+    canonical: 'https://www.profilesalome.co.uk',
   }
 };
 

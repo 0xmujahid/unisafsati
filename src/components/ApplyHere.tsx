@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG, sendEmailWithJS } from '@/utils/emailjs-init';
 
 const ApplyHere = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,24 +16,14 @@ const ApplyHere = () => {
     setSubmitError('');
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const data = {
-        name: formData.get('name') as string,
-        email: formData.get('email') as string,
-        phone: formData.get('phone') as string,
-        course: formData.get('course') as string,
-        message: formData.get('message') as string,
-      };
+      // Use our helper function to send the form data
+      const result = await sendEmailWithJS(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.APPLICATION_TEMPLATE_ID,
+        e.currentTarget
+      );
 
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
+      if (result.status !== 200) {
         throw new Error('Failed to send message');
       }
 
@@ -77,25 +69,25 @@ const ApplyHere = () => {
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="from_name" className="block text-sm font-medium text-gray-700 mb-1">
                     Full Name
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="from_name"
+                    name="from_name"
                     required
                     className="w-full px-4 text-black py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="reply_to" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
+                    id="reply_to"
+                    name="reply_to"
                     required
                     className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />

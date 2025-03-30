@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import ClientLayout from '@/components/ClientLayout';
 import Sidebar from '@/components/Sidebar';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Profile & Salome - UK & International Student Consultancy',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Profile & Salome - UK & International Student Consultancy',
     description: 'Expert UK student consultancy for university applications, student finance, visa guidance and guaranteed job placement.',
-    url: 'https://www.profilesalome.co.uk',
+    url: 'https://www.profileandsalome.com',
     siteName: 'Profile & Salome',
     images: [
       {
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://www.profilesalome.co.uk',
+    canonical: 'https://www.profileandsalome.com',
   }
 };
 
@@ -47,11 +48,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Get the public key value for inline script
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+  
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        {/* Load the EmailJS SDK */}
+        <Script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js" strategy="beforeInteractive" />
+        {/* Initialize EmailJS */}
+        <Script id="emailjs-init">
+          {`
+            (function() {
+              emailjs.init("${publicKey}");
+              console.log("EmailJS initialized with public key");
+            })();
+          `}
+        </Script>
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>

@@ -2,6 +2,8 @@
 
 import { useState, useRef } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '@/utils/emailjs-init';
 
 const ComplaintForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,23 +17,14 @@ const ComplaintForm = () => {
     setSubmitError('');
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const data = {
-        name: formData.get('name') as string,
-        email: formData.get('email') as string,
-        complaintType: formData.get('complaintType') as string,
-        complaint: formData.get('complaint') as string,
-      };
+      // Use EmailJS to send the form data
+      const result = await emailjs.sendForm(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.COMPLAINT_TEMPLATE_ID,
+        e.currentTarget
+      );
 
-      const response = await fetch('/api/send-complaint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
+      if (result.status !== 200) {
         throw new Error('Failed to send complaint');
       }
 
@@ -65,7 +58,7 @@ const ComplaintForm = () => {
         <div>
           <input
             type="text"
-            name="name"
+            name="from_name"
             placeholder="Your Name"
             required
             className="w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500"
@@ -75,7 +68,7 @@ const ComplaintForm = () => {
         <div>
           <input
             type="email"
-            name="email"
+            name="reply_to"
             placeholder="Your Email"
             required
             className="w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500"
@@ -84,7 +77,7 @@ const ComplaintForm = () => {
         
         <div>
           <select
-            name="complaintType"
+            name="complaint_type"
             required
             className="w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500"
           >
@@ -98,7 +91,7 @@ const ComplaintForm = () => {
         
         <div>
           <textarea
-            name="complaint"
+            name="message"
             rows={3}
             placeholder="Describe your complaint"
             required

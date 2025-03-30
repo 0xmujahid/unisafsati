@@ -70,7 +70,7 @@ const PromotionalBanner = () => {
           </div>
           
           <Link 
-            href="/apply" 
+            href="" 
             className="inline-flex items-center bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-8 py-3 rounded-full transition-all transform hover:scale-105 text-lg"
           >
             Apply Now

@@ -40,9 +40,10 @@ const WhyUnisef = () => {
   return (
     <section 
       ref={sectionRef}
+      id="why-profilesalome"
       className="bg-[#FFD700] w-full overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" >
         <div className="flex flex-col md:flex-row">
           {/* Left column with text */}
           <div 

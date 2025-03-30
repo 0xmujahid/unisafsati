@@ -40,6 +40,7 @@ const StudentFinance = () => {
   return (
     <section 
       ref={sectionRef}
+      id="student-finance"
       className="overflow-hidden bg-[#FFD700] pt-12 w-full"
     >
       <div className="container mx-auto px-4  md:px-8 lg:px-12">

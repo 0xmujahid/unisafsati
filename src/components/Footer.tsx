@@ -3,8 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaInstagram, FaFacebook, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { navigateToSection } from '@/utils/navigation';
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <>
     
@@ -51,34 +54,34 @@ const Footer = () => {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">About Us</h3>
               <ul className="space-y-2 sm:space-y-3">
               <li>
-                  <Link href="/about" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <button  onClick={() => navigateToSection('why-profilesalome', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Why PROFILE & SALOME?
-                </Link>
+                </button>
               </li>
               <li>
-                  <Link href="/student-support" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <button onClick={() => navigateToSection('student-finance', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Student Support
-                </Link>
+                </button>
               </li>
-              <li>
+              {/* <li>
                   <Link href="/locations" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Locations
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                   <Link href="/contact" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Contact Us
                 </Link>
-              </li>
+              </li> */}
               <li>
-                  <Link href="/apply" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <button onClick={() => navigateToSection('apply-here', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Apply Now
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -87,15 +90,15 @@ const Footer = () => {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-6 text-white">Courses</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <Link href="/courses/foundation" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <Link href="/courses/shortterm" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Short Term Courses
                 </Link>
               </li>
               <li>
-                  <Link href="/courses/foundation" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <Link href="/courses/mediumterm" className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                  Long Term Courses
+                  Medium Term Courses
                 </Link>
               </li>
               <li>

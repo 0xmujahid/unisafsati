@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { navigateToSection } from '@/utils/navigation';
 
 const Hero = () => {
 
@@ -16,6 +18,8 @@ const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(100);
+
+  const router = useRouter();
 
   useEffect(() => {
     const currentText = texts[currentTextIndex];
@@ -94,13 +98,13 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Link
-              href="#apply-here"
+            <button
+              onClick={() => navigateToSection('apply-here', router)}
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition duration-300"
               aria-label="Apply to study at a British University"
             >
               Apply Now
-            </Link>
+            </button>
           </motion.div>
         </motion.div>
       </div>

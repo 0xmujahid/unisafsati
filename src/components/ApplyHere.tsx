@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG, sendEmailWithJS } from '@/utils/emailjs-init';
+import { scrollToSection } from '@/utils/navigation';
 
 const ApplyHere = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,11 +35,8 @@ const ApplyHere = () => {
       
       setSubmitSuccess(true);
       
-      // Scroll to hero section
-      const heroSection = document.getElementById('hero');
-      if (heroSection) {
-        heroSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      // Scroll to hero section using our utility function
+      scrollToSection('hero');
       
       // Reset success message after 5 seconds
       setTimeout(() => {

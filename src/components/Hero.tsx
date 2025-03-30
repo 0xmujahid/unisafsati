@@ -10,7 +10,7 @@ import { navigateToSection } from '@/utils/navigation';
 const Hero = () => {
 
   const texts = [
-    "Apply now to study at  British Universities",
+    "Apply now to study inside and outsite the UK",
   ];
   
   const [displayText, setDisplayText] = useState('');

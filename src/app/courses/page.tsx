@@ -25,7 +25,7 @@ export default function CoursesPage() {
                 Apply Now
               </Link>
               <Link 
-                href="https://wa.link/r9qve5" 
+                href="https://wa.me/447350011170" 
                 target="_blank"
                 className="bg-white text-blue-900 hover:bg-gray-100 font-medium py-3 px-6 rounded-md flex items-center justify-center transition-colors"
               >

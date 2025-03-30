@@ -25,7 +25,7 @@ export default function StudentFinanceSupportPage() {
                 Apply Now
               </Link>
               <Link 
-                href="https://wa.link/zsv41s" 
+                href="https://wa.me/447350011170" 
                 target="_blank"
                 className="bg-white text-blue-900 hover:bg-gray-100 font-medium py-3 px-6 rounded-md flex items-center justify-center transition-colors"
               >
@@ -67,7 +67,7 @@ export default function StudentFinanceSupportPage() {
               
               <div className="mt-8">
                 <Link 
-                  href="https://wa.link/zsv41s" 
+                  href="https://wa.me/447350011170" 
                   target="_blank"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors"
                 >
@@ -221,7 +221,7 @@ export default function StudentFinanceSupportPage() {
               Apply Now
             </Link>
             <Link 
-              href="https://wa.link/zsv41s" 
+              href="https://wa.me/447350011170" 
               target="_blank"
               className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition-colors"
             >

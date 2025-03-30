@@ -10,11 +10,11 @@ export default function StudentFinanceSupportPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 max-w-4xl">
-              Student Finance Support in the UK
+              Student Finance Support 
             </h1>
             <div className="max-w-3xl mb-10">
               <p className="text-lg text-gray-200">
-                Get expert guidance on navigating the UK student finance system and maximize your financial support options.
+                Get expert guidance on navigating the global student finance system and maximize your financial support options.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -38,60 +38,7 @@ export default function StudentFinanceSupportPage() {
       </div>
 
       {/* Main Content */}
-      <div className="py-16 px-4 sm:px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">
-                Student Finance Support in the UK
-              </h2>
-              <div className="space-y-4 text-gray-700">
-                <p className="animate-fadeIn">
-                  Student Finance in England is the financial support offered by the government to students that <span className="font-semibold">meet the eligibility requirements.</span> It helps students pay their University fees and other costs via maintenance loans. This support allows many people across the UK to achieve their academic goals.
-                </p>
-                <p className="animate-fadeIn">
-                  <span className="font-semibold">UNISEF</span> with the application for Student Finance to all students applying with us. We can guide you through the correct forms to complete, how to send documents and other details, help with the documents needed, and all the Student Finance questions you may have.
-                </p>
-                <p className="animate-fadeIn">
-                  <a 
-                    href="https://www.gov.uk/government/publications/student-finance-how-youre-assessed-and-paid/student-finance-how-youre-assessed-and-paid-2022-to-2023" 
-                    target="_blank" 
-                    rel="noopener"
-                    className="font-semibold text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    Learn more about Student Finance.
-                  </a>
-                </p>
-              </div>
-              
-              <div className="mt-8">
-                <Link 
-                  href="https://wa.me/447350011170" 
-                  target="_blank"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors"
-                >
-                  <span>Message us on WhatsApp</span>
-                  <FaAngleRight className="ml-2" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Image */}
-            <div>
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <Image 
-                  src="https://unisef.co.uk/wp-content/uploads/2023/06/woman-g416151636_1280.jpg"
-                  alt="Student studying with financial support"
-                  width={1280}
-                  height={853}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Additional Information Section */}
       <div className="py-16 px-4 sm:px-6 md:px-12 bg-gray-50">

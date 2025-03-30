@@ -136,9 +136,7 @@ const Footer = () => {
                   <FaMapMarkerAlt className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
                 <div>
                     <p className="text-sm sm:text-base text-gray-300 font-medium">Address:</p>
-                    <p className="text-xs sm:text-sm text-gray-400">Forest House 16-20
- Clement Road London,
- Illford IG1 1BA</p>
+                    <p className="text-xs sm:text-sm text-gray-400">Forest House, 16-20 Clement Road, London, Ilford, IG1 1BA</p>
                 </div>
               </li>
               <li className="flex items-start">

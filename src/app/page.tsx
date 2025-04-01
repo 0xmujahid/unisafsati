@@ -14,8 +14,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Profile & Salome - UK & International Student Consultancy',
-  description: 'Expert UK educational consultancy helping students apply to British universities. We offer comprehensive support including visa guidance, student finance, and guaranteed job placement after graduation.'
+  title: 'Profile & Salome - National & International Student Consultancy',
+  description: 'Expert national and international educational consultancy helping students apply inside and outside uk. We offer comprehensive support including visa guidance, student finance, and guaranteed job placement after graduation.'
 };
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
             name: 'Profile & Salome',
-            description: 'UK & International Student Consultancy',
+            description: 'national & International Student Consultancy',
             url: 'https://www.profilesalome.co.uk',
             logo: 'https://www.profilesalome.co.uk/images/logo.png',
             address: {

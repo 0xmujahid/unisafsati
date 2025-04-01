@@ -93,7 +93,7 @@ const WhyUnisef = () => {
             <div className="relative h-full">
               <Image 
                 src="/images/why-unisef.png" 
-                alt="UNISEF Education" 
+                alt="Education" 
                 width={1200} 
                 height={1200}
                 className="w-full h-auto object-contain"

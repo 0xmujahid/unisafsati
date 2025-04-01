@@ -92,7 +92,7 @@ Unlock the power of education from the comfort of your home! Our online educatio
             <div className="relative h-full">
               <Image 
                 src="/images/remote.png" 
-                alt="UNISEF Education" 
+                alt="Education" 
                 width={1200} 
                 height={1200}
                 className="w-full h-auto object-contain"

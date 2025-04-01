@@ -8,7 +8,7 @@ import Sidebar from '@/components/Sidebar';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Profile & Salome - UK & International Student Consultancy',
+  title: 'Profile & Salome - national & International Student Consultancy',
   description: 'Expert UK student consultancy for university applications, student finance, visa guidance and guaranteed job placement. Study at British universities with full support.',
   keywords: ['UK student consultancy', 'British university application', 'international student UK', 'student visa UK', 'university enrollment UK', 'job placement after graduation', 'study in UK', 'student finance UK'],
   authors: [{ name: 'Profile & Salome' }],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Profile & Salome - UK & International Student Consultancy',
-    description: 'Expert UK student consultancy for university applications, student finance and guaranteed job placement.',
+    title: 'Profile & Salome - national & International Student Consultancy',
+    description: 'Expert national and international student consultancy for university applications, student finance and guaranteed job placement.',
     images: ['/images/banner.jpg'],
   },
   viewport: 'width=device-width, initial-scale=1',

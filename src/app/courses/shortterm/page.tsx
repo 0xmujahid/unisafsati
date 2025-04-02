@@ -25,7 +25,7 @@ export default function FoundationYearPage() {
                 Apply Now
               </Link>
               <Link 
-                href="https://wa.link/r9qve5" 
+                href="https://wa.me/447350011170" 
                 target="_blank"
                 className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition-colors"
               >

@@ -134,7 +134,7 @@ export default function AboutUsPage() {
               Apply Now
             </Link>
             <Link 
-              href="https://wa.link/zsv41s" 
+              href="https://wa.me/447350011170" 
               target="_blank"
               className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition-colors"
             >

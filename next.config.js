@@ -2,11 +2,11 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ['unisef.co.uk'],
+    domains: ['profilesalome.co.uk'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'unisef.co.uk',
+        hostname: 'profilesalome.co.uk',
         pathname: '/wp-content/uploads/**',
       },
     ],

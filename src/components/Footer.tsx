@@ -12,20 +12,7 @@ const Footer = () => {
     <>
     
       
-      {/* Sticky Phone Button */}
-      {/* <a 
-        href="tel:02039835819" 
-        className="fixed bottom-24 right-4 z-50 flex items-center group"
-        aria-label="Call us"
-      >
-        <div className="bg-white text-blue-600 shadow-lg rounded-l-full py-2 pl-4 pr-2 mr-1 transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-right">
-          <span className="text-sm font-medium whitespace-nowrap">Call us</span>
-        </div>
-        <div className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg transition-all duration-300 flex items-center justify-center">
-          <FaPhone className="text-xl" />
-        </div>
-      </a>
-       */}
+      
       <footer className="bg-gray-900 text-white pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 relative overflow-hidden">
       {/* Background decorations */}
         <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-blue-900 rounded-full opacity-10 transform translate-x-1/3 -translate-y-1/3"></div>
@@ -135,13 +122,7 @@ const Footer = () => {
             <div className="mt-6 lg:mt-0">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-6 text-white">Contact Information</h3>
               <ul className="space-y-3 sm:space-y-4">
-              <li className="flex items-start">
-                  <FaMapMarkerAlt className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
-                <div>
-                    <p className="text-sm sm:text-base text-gray-300 font-medium">Address:</p>
-                    <p className="text-xs sm:text-sm text-gray-400">Forest House, 16-20 Clement Road, London, Ilford, IG1 1BA</p>
-                </div>
-              </li>
+             
               <li className="flex items-start">
                   <FaEnvelope  className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
                 <div>

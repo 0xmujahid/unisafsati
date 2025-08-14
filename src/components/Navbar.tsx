@@ -9,15 +9,15 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [text, setText] = useState("profile");
+  const [text, setText] = useState("Profile");
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setText((prev) => (prev === "Profile" ? "Salome" : "Profile"));
-    }, 2500); // Change text every 2.5 seconds
+  // useEffect(() => {
+    // const interval = setInterval(() => {
+    //   setText((prev) => (prev === "Profile" ? "" : "Profile"));
+    // }, 2500); // Change text every 2.5 seconds
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  //   return () => clearInterval(interval); // Cleanup on unmount
+  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -88,7 +88,7 @@ const Hero = () => {
           <span className="animate-pulse border-r-2 border-[#ffd700] ml-1"></span>
           </h1>
           <p className="text-xl sm:text-2xl text-[#ffd700] mb-8 max-w-3xl mx-auto" itemProp="description">
-            From your university application enrolment to assisting you with your student finance application, PROFILE & SALOME will be by your side, guiding you through every step of the way.
+            From your university application enrolment to assisting you with your student finance application, PROFILE  will be by your side, guiding you through every step of the way.
           </p>
           <p className="text-lg sm:text-xl text-[#ffd700] mb-8 max-w-3xl mx-auto">
             <strong>Guaranteed job placement after graduation</strong> <span className="text-white">(limited availability)</span>.

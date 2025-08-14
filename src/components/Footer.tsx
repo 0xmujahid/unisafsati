@@ -31,7 +31,7 @@ const Footer = () => {
                   priority
                 />
                 <span className="text-4xl font-bold text-white ml-0" style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "-15px" }}>
-                  PROFILE & SALOME
+                  PROFILE 
                   <span className="text-sm text-[#FFD700] block leading-tight" style={{ fontSize: "10px" }}>National & international students consultancy</span>
                 </span>
               </div>
@@ -43,7 +43,7 @@ const Footer = () => {
               <li>
                   <button  onClick={() => navigateToSection('why-profilesalome', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                  Why PROFILE & SALOME?
+                  Why PROFILE?
                 </button>
               </li>
               <li>
@@ -147,7 +147,7 @@ const Footer = () => {
         
           <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800 text-xs sm:text-sm text-gray-500">
             <div className="flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-center sm:text-left">© 2024 PROFILE & SALOME | London – Manchester – Birmingham – Southampton – Leeds</p>
+              <p className="text-center sm:text-left">© 2024 PROFILE | London – Manchester – Birmingham – Southampton – Leeds</p>
               <div className="mt-3 sm:mt-0 flex space-x-2 sm:space-x-4">
               <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
               <span>|</span>

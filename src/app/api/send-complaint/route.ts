@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
           </div>
           
           <div style="margin-top: 30px; font-size: 12px; color: #6b7280; border-top: 1px solid #e0e0e0; padding-top: 10px;">
-            <p>This complaint was submitted from the Profile & Salome website.</p>
+            <p>This complaint was submitted from the Profile Consultancy website.</p>
           </div>
         </div>
       `,

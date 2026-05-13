@@ -1,6 +1,6 @@
-# Profile & Salome Website
+# Profile Consultancy Website
 
-This is the official website for Profile & Salome, a UK & International Student Consultancy.
+This is the official website for Profile Consultancy, a UK & International Student Consultancy.
 
 ## Email Form Configuration
 

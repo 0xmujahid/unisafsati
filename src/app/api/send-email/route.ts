@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
           </div>
           
           <div style="margin-top: 30px; font-size: 12px; color: #6b7280; border-top: 1px solid #e0e0e0; padding-top: 10px;">
-            <p>This email was sent from the Profile & Salome website contact form.</p>
+            <p>This email was sent from the Profile Consultancy website contact form.</p>
           </div>
         </div>
       `,

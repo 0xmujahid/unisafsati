@@ -8,23 +8,23 @@ import Sidebar from '@/components/Sidebar';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Profile & Salome - national & International Student Consultancy',
+  title: 'Profile Consultancy - national & International Student Consultancy',
   description: 'Expert UK student consultancy for university applications, student finance, visa guidance and guaranteed job placement. Study at British universities with full support.',
   keywords: ['UK student consultancy', 'British university application', 'international student UK', 'student visa UK', 'university enrollment UK', 'job placement after graduation', 'study in UK', 'student finance UK'],
-  authors: [{ name: 'Profile & Salome' }],
-  creator: 'Profile & Salome',
-  publisher: 'Profile & Salome',
+  authors: [{ name: 'Profile Consultancy' }],
+  creator: 'Profile Consultancy',
+  publisher: 'Profile Consultancy',
   openGraph: {
-    title: 'Profile & Salome - national & International Student Consultancy',
+    title: 'Profile Consultancy - national & International Student Consultancy',
     description: 'Expert national & International student consultancy for university applications, student finance, visa guidance and guaranteed job placement.',
     url: 'https://www.profileconsultancy.co.uk',
-    siteName: 'Profile & Salome',
+    siteName: 'Profile Consultancy',
     images: [
       {
         url: '/images/banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Profile & Salome Consultancy',
+        alt: 'Profile Consultancy Consultancy',
       }
     ],
     locale: 'en_GB',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Profile & Salome - national & International Student Consultancy',
+    title: 'Profile Consultancy - national & International Student Consultancy',
     description: 'Expert national and international student consultancy for university applications, student finance and guaranteed job placement.',
     images: ['/images/banner.jpg'],
   },

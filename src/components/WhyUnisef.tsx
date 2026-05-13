@@ -40,7 +40,7 @@ const WhyUnisef = () => {
   return (
     <section 
       ref={sectionRef}
-      id="why-profilesalome"
+      id="why-profileconsultancy"
       className="bg-[#FFD700] w-full overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" >

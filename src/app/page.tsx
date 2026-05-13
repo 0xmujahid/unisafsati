@@ -30,8 +30,8 @@ export default function Home() {
             '@type': 'EducationalOrganization',
             name: 'Profile & Salome',
             description: 'national & International Student Consultancy',
-            url: 'https://www.profilesalome.co.uk',
-            logo: 'https://www.profilesalome.co.uk/images/logo.png',
+            url: 'https://www.profileconsultancy.co.uk',
+            logo: 'https://www.profileconsultancy.co.uk/images/logo.png',
             address: {
               '@type': 'PostalAddress',
               addressCountry: 'UK'

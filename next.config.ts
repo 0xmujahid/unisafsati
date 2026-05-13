@@ -3,11 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['profilesalome.co.uk'],
+    domains: ['profileconsultancy.co.uk'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'profilesalome.co.uk',
+        hostname: 'profileconsultancy.co.uk',
         pathname: '/wp-content/uploads/**',
       },
     ],

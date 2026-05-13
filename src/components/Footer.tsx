@@ -41,7 +41,7 @@ const Footer = () => {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">About Us</h3>
               <ul className="space-y-2 sm:space-y-3">
               <li>
-                  <button  onClick={() => navigateToSection('why-profilesalome', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                  <button  onClick={() => navigateToSection('why-profileconsultancy', router)} className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors flex items-center">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                   Why PROFILE?
                 </button>
@@ -127,7 +127,7 @@ const Footer = () => {
                   <FaEnvelope  className="text-blue-400 mt-1 mr-2 sm:mr-3 flex-shrink-0 text-base sm:text-lg" />
                 <div>
                     <p className="text-sm sm:text-base text-gray-300 font-medium">Email:</p>
-                    <p className="text-xs sm:text-sm text-gray-400">info@profilesalome.co.uk</p>
+                    <p className="text-xs sm:text-sm text-gray-400">info@profileconsultancy.co.uk</p>
                  
                 </div>
               </li>
